@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-Medium.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-ExtraBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-ExtraBold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+body {
+  padding: 0;
+  background: #fff;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(59, 59, 59);
+  text-transform: uppercase;
+}
+span {
+  font-weight: bolder;
+  font-family: "Montserrat";
+}
+p {
+  color: rgb(59, 59, 59);
+  font-family: "Montserrat";
+  line-height: 200%;
+}
+.heroes-info {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7rem;
+  justify-items: center;
+  font-family: "Montserrat";
+  padding: 7rem;
+}
+
+.hero-image {
+  object-fit: cover;
+  width: 100%;
+  border: 5px solid rgb(26, 26, 26);
+  border-radius: 3px;
+}
+.superhero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 1rem 2rem;
+  background: rgb(255, 255, 255);
+}
+
+.rating-area {
+  overflow: hidden;
+  max-width: 225px;
+  margin: 0 auto;
+  font-family: "Montserrat";
+}
+.rating-area:not(:checked) > input {
+  display: none;
+  font-family: "Montserrat";
+}
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 32px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+  content: "★";
+}
+.rating-area > input:checked ~ label {
+  color: rgb(255, 230, 87);
+  text-shadow: 2px 1px rgb(44, 44, 44);
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px rgb(0, 77, 128);
+}
+/* .rate-area > label:active {
+  position: relative;
+} */
+
+@media (max-width: 767px) {
+  .heroes-info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroes-info {
+    grid-template-columns: 1fr;
+  }
+}
