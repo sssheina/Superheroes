@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (let hero of heroes) {
     heroesContent += `<div class="superhero">
     <h2>${hero.name}</h2>
+    <div class="image">${hero.image}</div>
     <p><span>Вселенная:</span> ${hero.universe}</p>
     <p><span>Альтер эго:</span> ${hero.alterego}</p>
     <p><span>Род деятельности:</span> ${hero.business}</p>
     <p><span>Друзья:</span> ${hero.friends}</p>
     <p><span>Суперсилы:</span> ${hero.superpowers}</p>
     <p><span>Подробная информация:</span> ${hero.details}</p>
-    <div class="image">${hero.image}</div>
     <p>${rating(hero.id)}</p>
     </div>`;
     index++;
